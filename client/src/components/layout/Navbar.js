@@ -9,7 +9,7 @@ const Navbar = () => {
           <div className='nav left'>
             <span className='gradient skew'>
               <h1 className='logo un-skew'>
-                <a href='#home'>Napier Logo</a>
+                <Link to='/'>Napier Logo</Link>
               </h1>
             </span>
             <button id='menu' className='btn-nav'>
