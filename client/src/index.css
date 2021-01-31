@@ -43,7 +43,7 @@ body {
   z-index: 100;
 }
 
-#nav {
+.nav {
   background-color: #fff;
   box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.1);
   display: flex;
@@ -52,7 +52,7 @@ body {
   height: 4.5em;
   overflow: hidden;
 }
-#nav.nav-visible {
+.nav.nav-visible {
   height: 100%;
   overflow: auto;
 }
@@ -133,7 +133,7 @@ a:hover {
     overflow: hidden;
   }
 
-  #nav {
+  .nav {
     overflow: hidden;
     flex-direction: row;
   }
