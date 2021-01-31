@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-const Landing = () => {
+const Planner = () => {
   return (
     <div>
       <header id='nav-wrapper'>
@@ -9,7 +9,7 @@ const Landing = () => {
           <div className='nav left'>
             <span className='gradient skew'>
               <h1 className='logo un-skew'>
-                <a href='#home'>Napier Logo</a>
+                <Link to='/'>Napier Logo</Link>
               </h1>
             </span>
             <button id='menu' className='btn-nav'>
@@ -44,4 +44,4 @@ const Landing = () => {
   );
 };
 
-export default Landing;
+export default Planner;
