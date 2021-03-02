@@ -1,11 +1,10 @@
 import React, { Fragment } from 'react';
 import './index.css';
-import { BrowserRouter as Router, Route } from 'react-router-dom';
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import Navbar from './components/layout/Navbar';
-import Planner from './components/layout/Planner';
-import Journal from './components/layout/Journal';
-import Community from './components/layout/Community';
 import Landing from './components/layout/Landing';
+import Login from './components/auth/Login';
+import Register from './components/auth/Register';
 
 const App = () => (
   <Router>
@@ -13,9 +12,10 @@ const App = () => (
       <Navbar />
       <Route exact path='/' component={Landing} />
       <section className='container'>
-        <Route exact path='/planner' component={Planner} />
-        <Route exact path='/journal' component={Journal} />
-        <Route exact path='/community' component={Community} />
+        <Switch>
+          <Route exact path='/Register' component={Register} />
+          <Route exact path='/Login' component={Login} />
+        </Switch>
       </section>
     </Fragment>
   </Router>
