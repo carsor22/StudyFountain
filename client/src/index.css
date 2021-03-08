@@ -48,7 +48,7 @@ body {
   box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.1);
   display: flex;
   flex-direction: column;
-  font-family: 'Saira Semi Condensed', sans-serif;
+  font-family: 'Poppins', sans-serif;
   height: 4.5em;
   overflow: hidden;
 }
@@ -71,9 +71,9 @@ body {
 }
 
 span.gradient {
-  background: #e5263f;
-  background: -webkit-linear-gradient(45deg, #e5263f);
-  background: linear-gradient(45deg, #e5263f);
+  background: #669e8c;
+  background: -webkit-linear-gradient(45deg);
+  background: linear-gradient(45deg, #669e8c);
   padding: 0 1em;
   position: relative;
   right: 1em;
@@ -103,14 +103,14 @@ a:visited {
 
 .nav-link {
   text-align: center;
-  border-top: 0.5px solid #e5263f;
+  border-top: 0.5px solid #669e8c;
 }
 
 a:link,
 a:visited,
 a:active {
   text-decoration: none;
-  color: #e5263f;
+  color: #669e8c;
 }
 
 a:hover {
@@ -124,7 +124,7 @@ a:hover {
 }
 
 .btn-nav {
-  color: #e5263f;
+  color: #669e8c;
   padding-left: 2em;
   padding-right: 2em;
 }
@@ -159,9 +159,9 @@ a:hover {
   .nav a:link.active,
   a:visited.active,
   a:active.active {
-    background: #e5263f;
-    background: -webkit-linear-gradient(45deg, #e5263f);
-    background: linear-gradient(45deg, #e5263f);
+    background: #669e8c;
+    background: -webkit-linear-gradient(45deg, #669e8c);
+    background: linear-gradient(45deg, #669e8c);
     color: #fff;
   }
 
@@ -172,7 +172,7 @@ a:hover {
 
   .nav-link {
     transform: skew(-20deg);
-    color: #e5263f;
+    color: #669e8c;
     text-decoration: none;
   }
   .nav-link:last-child {
@@ -180,8 +180,8 @@ a:hover {
   }
 
   a:hover.nav-link:not(.active) {
-    color: #e5263f;
-    background: #e5263f;
+    color: #669e8c;
+    background: #669e8c;
     background: linear-gradient(45deg, #fff, #ddd);
   }
 }
@@ -218,7 +218,7 @@ a:hover {
 }
 
 body {
-  font-family: 'Raleway', sans-serif;
+  font-family: 'Poppins', sans-serif;
   font-size: 1rem;
   line-height: 1.6;
   background-color: #fff;
