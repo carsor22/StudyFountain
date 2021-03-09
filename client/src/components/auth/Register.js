@@ -1,7 +1,10 @@
 import { Fragment, useState } from 'react';
 import React from 'react';
-import axios from 'axios';
+
+/* import axios from 'axios';
 import { JsonWebTokenError } from 'jsonwebtoken';
+
+*/
 
 const Register = () => {
   const [formData, setFormData] = useState({
