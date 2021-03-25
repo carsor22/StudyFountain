@@ -8,6 +8,8 @@ import Register from './components/auth/Register';
 import Alert from './components/layout/Alert';
 import { loadUser } from './actions/auth';
 import Dashboard from './components/dashboard/Dashboard';
+import Planner from './components/dashboard/Planner';
+import Journal from './components/dashboard/Journal';
 import PrivateRoute from './components/routing/PrivateRoute';
 
 //Redux
@@ -37,6 +39,8 @@ const App = () => {
               <Route exact path='/Register' component={Register} />
               <Route exact path='/Login' component={Login} />
               <PrivateRoute exact path='/Dashboard' component={Dashboard} />
+              <PrivateRoute exact path='/Planner' component={Planner} />
+              <PrivateRoute exact path='/Journal' component={Journal} />
             </Switch>
           </section>
         </Fragment>
