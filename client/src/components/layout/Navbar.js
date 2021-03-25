@@ -6,13 +6,38 @@ import PropTypes from 'prop-types';
 
 const Navbar = ({ auth: { isAuthenticated, loading }, logout }) => {
   const authLinks = (
+    
     <div className='nav right'>
       <a onClick={logout} href='#!'>
         Logout
       </a>
       <span className='nav-link active '></span>
+      <Link to='/dashboard' className='nav-link active'>
+        <span className='nav-link-span'>
+          <span className='u-nav'>Dashboard</span>
+        </span>
+      </Link>
+      <Link to='/journal' className='nav-link active'>
+        <span className='nav-link-span'>
+          <span className='u-nav'>myPlanner</span>
+        </span>
+      </Link>
+      <Link to='/planner' className='nav-link active'>
+        <span className='nav-link-span'>
+          <span className='u-nav'>myJournal</span>
+        </span>
+      </Link>
     </div>
   );
+
+  
+  
+  
+      
+      
+   
+
+
 
   const guestLinks = (
     <div className='nav right'>
@@ -61,4 +86,4 @@ const mapStateToProps = (state) => ({
   auth: state.auth,
 });
 
-export default connect(mapStateToProps)(Navbar);
+export default connect(mapStateToProps, {logout})(Navbar);
