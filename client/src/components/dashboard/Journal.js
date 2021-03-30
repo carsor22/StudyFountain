@@ -1,10 +1,7 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 
-const Dashboard = (props) => {
+const Journal = (props) => {
   return <div>myJournal</div>;
 };
 
-Dashboard.propTypes = {};
-
-export default Dashboard;
+export default Journal;
