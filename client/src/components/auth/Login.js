@@ -1,6 +1,6 @@
 import { Fragment, useState } from 'react';
 import React from 'react';
-import { Link, Redirect } from 'react-router-dom';
+import { Link, Redirect, Switch } from 'react-router-dom';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
 import { login } from '../../actions/auth';
@@ -30,37 +30,37 @@ const Login = ({ login, isAuthenticated }) => {
   return (
     <Fragment>
       {' '}
-      <h1 class='large text-primary'>Sign In</h1>
-      <p class='lead'>
-        <i class='fas fa-user'></i> Sign Into Your Account
-      </p>
-      <form class='form' onSubmit={(e) => onSubmit(e)}>
-        <div class='form-group'>
-          <input
-            type='email'
-            placeholder='Email Address'
-            name='email'
-            value={email}
-            onChange={(e) => onChange(e)}
-            required
-          />
-        </div>
-        <div class='form-group'>
-          <input
-            type='password'
-            placeholder='Password'
-            name='password'
-            value={password}
-            onChange={(e) => onChange(e)}
-            required
-            minLength='6'
-          />
-        </div>
-        <input type='submit' class='btn btn-primary' value='Login' />
-      </form>
-      <p class='my-1'>
-        Don't have an account? <Link to='/login'>Log In</Link>
-      </p>
+        <h1 class='large text-primary'>Sign In</h1>
+        <p class='lead'>
+          <i class='fas fa-user'></i> Sign Into Your Account
+        </p>
+        <form class='form' onSubmit={(e) => onSubmit(e)}>
+          <div class='form-group'>
+            <input
+              type='email'
+              placeholder='Email Address'
+              name='email'
+              value={email}
+              onChange={(e) => onChange(e)}
+              required
+            />
+          </div>
+          <div class='form-group'>
+            <input
+              type='password'
+              placeholder='Password'
+              name='password'
+              value={password}
+              onChange={(e) => onChange(e)}
+              required
+              minLength='6'
+            />
+          </div>
+          <input type='submit' className='btn btn-primary' value='Login' />
+        </form>
+        <p class='my-1'>
+          Don't have an account? <Link to='/login'>Log In</Link>
+        </p>
     </Fragment>
   );
 };

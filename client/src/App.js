@@ -3,19 +3,13 @@ import './index.css';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import Navbar from './components/layout/Navbar';
 import Landing from './components/layout/Landing';
-import Login from './components/auth/Login';
-import Register from './components/auth/Register';
-import Alert from './components/layout/Alert';
-import { loadUser } from './actions/auth';
-import Dashboard from './components/dashboard/Dashboard';
-import Planner from './components/dashboard/Planner';
-import Journal from './components/dashboard/Journal';
-import PrivateRoute from './components/routing/PrivateRoute';
+import Routes from './components/routing/Routes';
 
 //Redux
 
 import { Provider } from 'react-redux';
 import store from './store';
+import { loadUser } from './actions/auth';
 import setAuthToken from './utils/setAuthToken';
 
 if (localStorage.token) {
@@ -32,17 +26,10 @@ const App = () => {
       <Router>
         <Fragment>
           <Navbar />
-          <Route exact path='/' component={Landing} />
-          <section className='container'>
-            <Alert />
-            <Switch>
-              <Route exact path='/Register' component={Register} />
-              <Route exact path='/Login' component={Login} />
-              <PrivateRoute exact path='/Dashboard' component={Dashboard} />
-              <PrivateRoute exact path='/Planner' component={Planner} />
-              <PrivateRoute exact path='/Journal' component={Journal} />
-            </Switch>
-          </section>
+          <Switch>
+            <Route exact path='/' component={Landing} />
+            <Route component={Routes} />
+          </Switch>
         </Fragment>
       </Router>
     </Provider>

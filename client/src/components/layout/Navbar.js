@@ -51,11 +51,11 @@ const Navbar = ({ auth: { isAuthenticated, loading }, logout }) => {
           <div className='nav left'>
             <span className='gradient skew'>
               <h1 className='logo un-skew'>
-                <Link to='/'>App name</Link>
+                <Link to='/'>Study Fountain</Link>
               </h1>
             </span>
             <button id='menu' className='btn-nav'>
-              <span className='fas fa-bars'></span>
+              <span className='fas fa-bars'>Study Fountain</span>
             </button>
           </div>
           {!loading && (

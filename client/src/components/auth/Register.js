@@ -33,64 +33,64 @@ const Register = ({ setAlert, register, isAuthenticated }) => {
   }
 
   return (
-    <Fragment>
+    <Fragment> 
       {' '}
-      <h1 class='large text-primary'>Sign Up</h1>
-      <p class='lead'>
-        <i class='fas fa-user'></i> Create Your Account
-      </p>
-      <form class='form' onSubmit={(e) => onSubmit(e)}>
-        <div class='form-group'>
-          <input
-            type='text'
-            placeholder='Name'
-            name='name'
-            value={name}
-            onChange={(e) => onChange(e)}
-            required
-          />
-        </div>
-        <div class='form-group'>
-          <input
-            type='email'
-            placeholder='Email Address'
-            name='email'
-            value={email}
-            onChange={(e) => onChange(e)}
-            required
-          />
-          <small class='form-text'>
-            This site uses Gravatar so if you want a profile image, use a
-            Gravatar email
-          </small>
-        </div>
-        <div class='form-group'>
-          <input
-            type='password'
-            placeholder='Password'
-            name='password'
-            value={password}
-            onChange={(e) => onChange(e)}
-            required
-            minLength='6'
-          />
-        </div>
-        <div class='form-group'>
-          <input
-            type='password'
-            placeholder='Confirm Password'
-            name='password2'
-            value={password2}
-            onChange={(e) => onChange(e)}
-            required
-            minLength='6'
-          />
-        </div>
-        <input type='submit' class='btn btn-primary' value='Register' />
-      </form>
-      <p class='my-1'>
-        Don't have an account? <Link to='/register'>Sign Up</Link>
-      </p>
+        <h1 class='large text-primary'>Sign Up</h1>
+        <p class='lead'>
+          <i class='fas fa-user'></i> Create Your Account
+        </p>
+        <form class='form' onSubmit={(e) => onSubmit(e)}>
+          <div class='form-group'>
+            <input
+              type='text'
+              placeholder='Name'
+              name='name'
+              value={name}
+              onChange={(e) => onChange(e)}
+              required
+            />
+          </div>
+          <div class='form-group'>
+            <input
+              type='email'
+              placeholder='Email Address'
+              name='email'
+              value={email}
+              onChange={(e) => onChange(e)}
+              required
+            />
+            <small class='form-text'>
+              This site uses Gravatar so if you want a profile image, use a
+              Gravatar email
+            </small>
+          </div>
+          <div class='form-group'>
+            <input
+              type='password'
+              placeholder='Password'
+              name='password'
+              value={password}
+              onChange={(e) => onChange(e)}
+              required
+              minLength='6'
+            />
+          </div>
+          <div class='form-group'>
+            <input
+              type='password'
+              placeholder='Confirm Password'
+              name='password2'
+              value={password2}
+              onChange={(e) => onChange(e)}
+              required
+              minLength='6'
+            />
+          </div>
+          <input type='submit' class='btn btn-primary' value='Register' />
+        </form>
+        <p class='my-1'>
+          Don't have an account? <Link to='/register'>Sign Up</Link>
+        </p>
     </Fragment>
   );
 };

@@ -7,15 +7,20 @@ const Landing = ({ isAuthenticated }) => {
   if (isAuthenticated) {
     return <Redirect to='/dashboard' />;
   }
-  
+
   return (
     <section className='landing'>
       <div className='dark-overlay'>
         <div className='landing-inner'>
-          <h1 className='x-large'>App Name here</h1>
-          <p className='lead'>Short description here</p>
+          <h1 className='x-large'>Welcome</h1>
+          <p className='lead'>
+            An online MBI platform to improve your study-management skills
+          </p>
           <div className='buttons'>
-            <Link to='/register' className='btn btn-primary'>
+            <Link
+              to='/register'
+              className='btn btn-primary'
+            >
               Register
             </Link>
             <Link to='/login' className='btn btn-light'>
