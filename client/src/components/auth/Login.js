@@ -1,6 +1,6 @@
 import { Fragment, useState } from 'react';
 import React from 'react';
-import { Link, Redirect, Switch } from 'react-router-dom';
+import { Link, Redirect } from 'react-router-dom';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
 import { login } from '../../actions/auth';
