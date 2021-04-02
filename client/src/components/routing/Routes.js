@@ -4,8 +4,8 @@ import Login from '../auth/Login';
 import Register from '..//auth/Register';
 import Alert from '..//layout/Alert';
 import Dashboard from '../dashboard/Dashboard';
-import Planner from '../dashboard/Planner';
-import Journal from '../dashboard/Journal';
+import Planner from '../dashboard/planner/Planner';
+import Journal from '../dashboard/journal/Journal';
 import PrivateRoute from '../routing/PrivateRoute';
 
 export const Routes = () => {
