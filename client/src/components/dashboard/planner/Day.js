@@ -7,7 +7,6 @@ export const Day = ({ day, onClick }) => {
   return (
     <div onClick={onClick} className={className}>
       {day.value === 'padding' ? '' : day.value}
-
       {day.event && <div className='task'>{day.event.title}</div>}
     </div>
   );

@@ -220,8 +220,8 @@ body {
   font-family: 'Poppins', sans-serif;
   font-size: 1rem;
   line-height: 1.6;
-  background-color: #fff;
-  color: #333;
+  background-color: grey;
+  color: white;
 }
 
 a {
@@ -548,7 +548,6 @@ button {
 .bod {
   display: flex;
   justify-content: center;
-  background-color: grey;
 }
 
 #cont {
@@ -557,13 +556,12 @@ button {
 
 #top {
   padding: 10px;
-  color: #669e8c;
+  color: white;
   font-size: 26px;
   font-family: sans-serif;
   display: flex;
   justify-content: space-between;
   margin-bottom: -7em;
-  margin-top: 2em;
 }
 
 button {
@@ -586,7 +584,7 @@ button {
 #weekdays {
   width: 100%;
   display: flex;
-  color: #669e8c;
+  color: white;
 }
 
 #weekdays div {
@@ -606,9 +604,8 @@ button {
   height: 100px;
   cursor: pointer;
   box-sizing: border-box;
-  background-color: white;
   margin: 5px;
-  box-shadow: 0px 0px 3px #cbd4c2;
+  box-shadow: 0px 3px 3px #669e8c;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -619,25 +616,25 @@ button {
 }
 
 .day + #currentDay {
-  background-color: #e8f4fa;
+  background-color: #669e8c;
 }
 
 .task {
   font-size: 10px;
   padding: 3px;
-  background-color: black;
-  color: white;
+  background-color: white;
+  color: black;
   border-radius: 5px;
   max-height: 55px;
   overflow: hidden;
 }
 
 #removeTask {
-  margin-top: 3em;
+  margin-left: 5em;
 }
 
 #addTask {
-  margin-top: 3em;
+  margin-left: 5em;
 }
 
 #cancelButton {

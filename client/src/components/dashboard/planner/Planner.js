@@ -14,7 +14,7 @@ export const Planner = () => {
       : []
   );
 
-  const eventForDate = (date) => tasks.find((e) => e.date === date);
+  const matchTaskToDate = (date) => tasks.find((e) => e.date === date);
 
   useEffect(() => {
     localStorage.setItem('tasks', JSON.stringify(tasks));
@@ -31,7 +31,6 @@ export const Planner = () => {
             onNext={() => setNav(nav + 1)}
             onBack={() => setNav(nav - 1)}
           />
-
           <div id='weekdays'>
             <div>Sunday</div>
             <div>Monday</div>
@@ -41,7 +40,6 @@ export const Planner = () => {
             <div>Friday</div>
             <div>Saturday</div>
           </div>
-
           <div id='calendar'>
             {days.map((d, index) => (
               <Day
@@ -57,7 +55,7 @@ export const Planner = () => {
           </div>
         </div>
       </div>
-      {clicked && !eventForDate(clicked) && (
+      {clicked && !matchTaskToDate(clicked) && (
         <NewTask
           onClose={() => setClicked(null)}
           onSave={(title) => {
@@ -66,10 +64,9 @@ export const Planner = () => {
           }}
         />
       )}
-
-      {clicked && eventForDate(clicked) && (
+      {clicked && matchTaskToDate(clicked) && (
         <RemoveTask
-          eventText={eventForDate(clicked).title}
+          eventText={matchTaskToDate(clicked).title}
           onClose={() => setClicked(null)}
           onDelete={() => {
             setTasks(tasks.filter((e) => e.date !== clicked));

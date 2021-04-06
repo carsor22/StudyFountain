@@ -30,7 +30,6 @@ const Login = ({ login, isAuthenticated }) => {
   return (
     <Fragment>
       {' '}
-        <h1 class='large text-primary'>Sign In</h1>
         <p class='lead'>
           <i class='fas fa-user'></i> Sign Into Your Account
         </p>
