@@ -1,22 +1,24 @@
 import React, { useState } from 'react';
 
-export const NewEventModal = ({ onSave, onClose }) => {
+export const NewTask = ({ onSave, onClose }) => {
   const [title, setTitle] = useState('');
   const [error, setError] = useState(false);
 
   return (
     <>
-      <div id='newEventModal'>
-        <h2>New Event</h2>
+      <div id='addTask'>
+        <h2>Add task to calendar</h2>
 
         <input
           className={error ? 'error' : ''}
           value={title}
           onChange={(e) => setTitle(e.target.value)}
-          id='eventTitleInput'
-          placeholder='Event Title'
+          placeholder='Task Title'
         />
-
+        <br>
+        </br>
+        <br>
+        </br>
         <button
           onClick={() => {
             if (title) {
@@ -26,9 +28,9 @@ export const NewEventModal = ({ onSave, onClose }) => {
               setError(true);
             }
           }}
-          id='saveButton'
+          id='addButton'
         >
-          Save
+          Add
         </button>
 
         <button onClick={onClose} id='cancelButton'>
@@ -36,9 +38,9 @@ export const NewEventModal = ({ onSave, onClose }) => {
         </button>
       </div>
 
-      <div id='modalBackDrop'></div>
+      <div></div>
     </>
   );
 };
 
-export default NewEventModal;
+export default NewTask;

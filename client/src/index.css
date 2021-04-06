@@ -555,7 +555,7 @@ button {
   width: 770px;
 }
 
-#head {
+#top {
   padding: 10px;
   color: #669e8c;
   font-size: 26px;
@@ -622,7 +622,7 @@ button {
   background-color: #e8f4fa;
 }
 
-.event {
+.task {
   font-size: 10px;
   padding: 3px;
   background-color: black;
@@ -630,4 +630,20 @@ button {
   border-radius: 5px;
   max-height: 55px;
   overflow: hidden;
+}
+
+#removeTask {
+  margin-top: 3em;
+}
+
+#addTask {
+  margin-top: 3em;
+}
+
+#cancelButton {
+  width: 100px;
+}
+
+#removeButton {
+  width: 110px;
 }

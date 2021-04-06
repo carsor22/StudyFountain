@@ -1,78 +1,78 @@
 import React, { useState, useEffect } from 'react';
-import { CalendarHeader } from './CalendarHeader';
+import { CalendarTop } from './CalendarTop';
 import { Day } from './Day';
-import { NewEventModal } from './NewEventModal';
-import { DeleteEventModal } from './DeleteEventModal';
+import { NewTask } from './NewTask';
+import { RemoveTask } from './RemoveTask';
 import { useDate } from './useDate';
 
 export const Planner = () => {
   const [nav, setNav] = useState(0);
   const [clicked, setClicked] = useState();
-  const [events, setEvents] = useState(
-    localStorage.getItem('events')
-      ? JSON.parse(localStorage.getItem('events'))
+  const [tasks, setTasks] = useState(
+    localStorage.getItem('tasks')
+      ? JSON.parse(localStorage.getItem('tasks'))
       : []
   );
 
-  const eventForDate = (date) => events.find((e) => e.date === date);
+  const eventForDate = (date) => tasks.find((e) => e.date === date);
 
   useEffect(() => {
-    localStorage.setItem('events', JSON.stringify(events));
-  }, [events]);
+    localStorage.setItem('tasks', JSON.stringify(tasks));
+  }, [tasks]);
 
-  const { days, dateDisplay } = useDate(events, nav);
+  const { days, dateDisplay } = useDate(tasks, nav);
 
   return (
     <>
-      <div className= "bod">
-      <div id='cont'>
-        <CalendarHeader
-          dateDisplay={dateDisplay}
-          onNext={() => setNav(nav + 1)}
-          onBack={() => setNav(nav - 1)}
-        />
+      <div className='bod'>
+        <div id='cont'>
+          <CalendarTop
+            dateDisplay={dateDisplay}
+            onNext={() => setNav(nav + 1)}
+            onBack={() => setNav(nav - 1)}
+          />
 
-        <div id='weekdays'>
-          <div>Sunday</div>
-          <div>Monday</div>
-          <div>Tuesday</div>
-          <div>Wednesday</div>
-          <div>Thursday</div>
-          <div>Friday</div>
-          <div>Saturday</div>
-        </div>
+          <div id='weekdays'>
+            <div>Sunday</div>
+            <div>Monday</div>
+            <div>Tuesday</div>
+            <div>Wednesday</div>
+            <div>Thursday</div>
+            <div>Friday</div>
+            <div>Saturday</div>
+          </div>
 
-        <div id='calendar'>
-          {days.map((d, index) => (
-            <Day
-              key={index}
-              day={d}
-              onClick={() => {
-                if (d.value !== 'padding') {
-                  setClicked(d.date);
-                }
-              }}
-            />
-          ))}
+          <div id='calendar'>
+            {days.map((d, index) => (
+              <Day
+                key={index}
+                day={d}
+                onClick={() => {
+                  if (d.value !== 'padding') {
+                    setClicked(d.date);
+                  }
+                }}
+              />
+            ))}
+          </div>
         </div>
       </div>
-            </div>
       {clicked && !eventForDate(clicked) && (
-        <NewEventModal
+        <NewTask
           onClose={() => setClicked(null)}
           onSave={(title) => {
-            setEvents([...events, { title, date: clicked }]);
+            setTasks([...tasks, { title, date: clicked }]);
             setClicked(null);
           }}
         />
       )}
 
       {clicked && eventForDate(clicked) && (
-        <DeleteEventModal
+        <RemoveTask
           eventText={eventForDate(clicked).title}
           onClose={() => setClicked(null)}
           onDelete={() => {
-            setEvents(events.filter((e) => e.date !== clicked));
+            setTasks(tasks.filter((e) => e.date !== clicked));
             setClicked(null);
           }}
         />
