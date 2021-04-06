@@ -555,13 +555,12 @@ button {
 }
 
 #top {
-  padding: 10px;
-  color: white;
-  font-size: 26px;
-  font-family: sans-serif;
   display: flex;
   justify-content: space-between;
+  padding: 10px;
   margin-bottom: -7em;
+  font-size: 26px;
+  color: white;
 }
 
 button {
@@ -592,13 +591,16 @@ button {
   padding: 10px;
 }
 #calendar {
-  width: 100%;
-  margin: auto;
   display: flex;
   flex-wrap: wrap;
+  width: 100%;
+  margin: auto;
   margin-bottom: 5em;
 }
 .day {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
   width: 100px;
   padding: 10px;
   height: 100px;
@@ -606,9 +608,6 @@ button {
   box-sizing: border-box;
   margin: 5px;
   box-shadow: 0px 3px 3px #669e8c;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
 }
 
 .day:hover {
