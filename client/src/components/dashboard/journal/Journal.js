@@ -1,60 +1,59 @@
 import { useEffect, useState } from 'react';
 import uuid from 'react-uuid';
 import Main from './Main';
-import Sidebar from './Sidebar';
+import EntryList from './EntryList';
 
 function Journal() {
-  const [notes, setNotes] = useState(
-    localStorage.notes ? JSON.parse(localStorage.notes) : []
+  const [entries, setEntries] = useState(
+    localStorage.entries ? JSON.parse(localStorage.entries) : []
   );
-  const [activeNote, setActiveNote] = useState(false);
+  const [activeEntry, setActiveEntry] = useState(false);
 
   useEffect(() => {
-    localStorage.setItem('notes', JSON.stringify(notes));
-  }, [notes]);
+    localStorage.setItem('entries', JSON.stringify(entries));
+  }, [entries]);
 
-  const onAddNote = () => {
-    const newNote = {
+  const onAddEntry = () => {
+    const newEntry = {
       id: uuid(),
-      title: 'Untitled Note',
+      title: 'Untitled Entry',
       body: '',
       lastModified: Date.now(),
     };
 
-    setNotes([newNote, ...notes]);
-    setActiveNote(newNote.id);
+    setEntries([newEntry, ...entries]);
+    setActiveEntry(newEntry.id);
   };
 
-  const onDeleteNote = (noteId) => {
-    setNotes(notes.filter(({ id }) => id !== noteId));
+  const onDeleteEntry = (entryId) => {
+    setEntries(entries.filter(({ id }) => id !== entryId));
   };
 
-  const onUpdateNote = (updatedNote) => {
-    const updatedNotesArr = notes.map((note) => {
-      if (note.id === updatedNote.id) {
-        return updatedNote;
+  const onUpdateEntry = (updatedEntry) => {
+    const updatedEntriesArr = entries.map((entry) => {
+      if (entry.id === updatedEntry.id) {
+        return updatedEntry;
       }
-
-      return note;
+      return entry;
     });
 
-    setNotes(updatedNotesArr);
+    setEntries(updatedEntriesArr);
   };
 
-  const getActiveNote = () => {
-    return notes.find(({ id }) => id === activeNote);
+  const getActiveEntry = () => {
+    return entries.find(({ id }) => id === activeEntry);
   };
 
   return (
-    <div className='App'>
-      <Sidebar
-        notes={notes}
-        onAddNote={onAddNote}
-        onDeleteNote={onDeleteNote}
-        activeNote={activeNote}
-        setActiveNote={setActiveNote}
+    <div className='Jcont'>
+      <EntryList
+        entries={entries}
+        onAddEntry={onAddEntry}
+        onDeleteEntry={onDeleteEntry}
+        activeEntry={activeEntry}
+        setActiveEntry={setActiveEntry}
       />
-      <Main activeNote={getActiveNote()} onUpdateNote={onUpdateNote} />
+      <Main activeEntry={getActiveEntry()} onUpdateEntry={onUpdateEntry} />
     </div>
   );
 }

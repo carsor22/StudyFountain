@@ -644,7 +644,12 @@ button {
   margin-right: 2em;
 }
 
-.App {
+.CalBut {
+  margin-right: 1em;
+  font-size: 20px;
+}
+
+.Jcont {
   width: 100%;
   height: 70vh;
   overflow: hidden;
@@ -661,62 +666,62 @@ button {
   cursor: pointer;
 }
 
-.App {
+.Jcont {
   display: flex;
 }
 
-.app-sidebar {
+.Jcont-sidebar {
   width: 30%;
   height: 75vh;
   border-right: 1px solid white;
 }
 
-.app-sidebar-header {
+.Jcont-sidebar-header {
   display: flex;
   justify-content: space-between;
   padding: 25px;
 }
-.app-sidebar-header h1 {
+.Jcont-sidebar-header h1 {
   margin: 0;
 }
 
-.app-sidebar-notes {
+.Jcont-sidebar-entries {
   height: calc(100vh - 78px);
   overflow-y: scroll;
 }
-.app-sidebar-note {
+.Jcont-sidebar-entry {
   padding: 25px;
   cursor: pointer;
 }
-.sidebar-note-title {
+.sidebar-entry-title {
   display: flex;
   justify-content: space-between;
 }
 
-.sidebar-note-title button {
+.sidebar-entry-title button {
   background-color: #e5263f;
 }
 
-.app-sidebar-note p {
+.Jcont-sidebar-entry p {
   margin: 10px 0;
 }
 
-.app-sidebar-note.active,
-.app-sidebar-note.active small {
+.Jcont-sidebar-entry.active,
+.Jcont-sidebar-entry.active small {
   background: #669e8c;
   color: white;
 }
 
-.app-main {
+.Jcont-main {
   width: 70%;
   height: 100vh;
 }
-.app-main-note-edit,
-.app-main-note-preview {
+.Jcont-main-entry-edit,
+.Jcont-main-entry-preview {
   height: 50vh;
 }
 
-.no-active-note {
+.no-active-entry {
   width: 70%;
   height: 100vh;
   line-height: 100vh;
@@ -725,11 +730,11 @@ button {
   color: grey;
 }
 
-.app-main-note-edit {
+.Jcont-main-entry-edit {
   padding: 60px;
 }
 
-.app-main-note-edit input,
+.Jcont-main-entry-edit input,
 textarea {
   display: block;
   border: 1px solid white;
@@ -741,7 +746,7 @@ textarea {
   font-size: inherit;
   font-family: inherit;
 }
-.app-main-note-edit input {
+.Jcont-main-entry-edit input {
   height: 50px;
   font-size: 2rem;
 }

@@ -5,10 +5,10 @@ export const CalendarTop = ({ onNext, onBack, dateDisplay }) => {
     <div id='top'>
       <div>{dateDisplay}</div>
       <div>
-        <button onClick={onBack} >
+        <button onClick={onBack} className='CalBut'>
           Back
         </button>
-        <button onClick={onNext} >
+        <button onClick={onNext} className='CalBut'>
           Next
         </button>
       </div>
