@@ -650,6 +650,7 @@ button {
 }
 
 .Jcont {
+  display: flex;
   width: 100%;
   height: 70vh;
   overflow: hidden;
@@ -664,10 +665,6 @@ button {
   font-size: inherit;
   font-family: inherit;
   cursor: pointer;
-}
-
-.Jcont {
-  display: flex;
 }
 
 .Jcont-sidebar {
