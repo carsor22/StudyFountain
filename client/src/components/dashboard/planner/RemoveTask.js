@@ -5,6 +5,7 @@ export const RemoveTask = ({ onDelete, eventText, onClose }) => {
     <>
       <div id='removeTask'>
         <h2>Remove Task</h2>
+        <br></br>
         <p>{eventText}</p>
         <br></br>
         <button onClick={onDelete} id='removeButton'>

@@ -8,16 +8,15 @@ export const NewTask = ({ onSave, onClose }) => {
     <>
       <div id='addTask'>
         <h2>Add task to calendar</h2>
+        <br></br>
         <input
           className={error ? 'error' : ''}
           value={title}
           onChange={(e) => setTitle(e.target.value)}
           placeholder='Task Title'
         />
-        <br>
-        </br>
-        <br>
-        </br>
+        <br></br>
+        <br></br>
         <button
           onClick={() => {
             if (title) {

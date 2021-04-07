@@ -558,7 +558,7 @@ button {
   display: flex;
   justify-content: space-between;
   padding: 10px;
-  margin-bottom: -7em;
+  margin-bottom: 2em;
   font-size: 26px;
   color: white;
 }
@@ -574,7 +574,7 @@ button {
   color: white;
   margin-bottom: 10em;
   margin-top: -5em;
-  margin-right: 1em;
+  margin-right: 5em;
   margin-left: 1em;
   font-size: 20px;
   text-align: center;
@@ -636,10 +636,112 @@ button {
   margin-left: 5em;
 }
 
-#cancelButton {
-  width: 100px;
+#addButton {
+  margin-right: 2em;
 }
 
 #removeButton {
-  width: 110px;
+  margin-right: 2em;
+}
+
+.App {
+  width: 100%;
+  height: 70vh;
+  overflow: hidden;
+  font-size: 16px;
+}
+
+button {
+  background: #669e8c;
+  border: 0;
+  margin: 0;
+  padding: 0;
+  font-size: inherit;
+  font-family: inherit;
+  cursor: pointer;
+}
+
+.App {
+  display: flex;
+}
+
+.app-sidebar {
+  width: 30%;
+  height: 75vh;
+  border-right: 1px solid white;
+}
+
+.app-sidebar-header {
+  display: flex;
+  justify-content: space-between;
+  padding: 25px;
+}
+.app-sidebar-header h1 {
+  margin: 0;
+}
+
+.app-sidebar-notes {
+  height: calc(100vh - 78px);
+  overflow-y: scroll;
+}
+.app-sidebar-note {
+  padding: 25px;
+  cursor: pointer;
+}
+.sidebar-note-title {
+  display: flex;
+  justify-content: space-between;
+}
+
+.sidebar-note-title button {
+  background-color: #e5263f;
+}
+
+.app-sidebar-note p {
+  margin: 10px 0;
+}
+
+.app-sidebar-note.active,
+.app-sidebar-note.active small {
+  background: #669e8c;
+  color: white;
+}
+
+.app-main {
+  width: 70%;
+  height: 100vh;
+}
+.app-main-note-edit,
+.app-main-note-preview {
+  height: 50vh;
+}
+
+.no-active-note {
+  width: 70%;
+  height: 100vh;
+  line-height: 100vh;
+  text-align: center;
+  font-size: 2rem;
+  color: grey;
+}
+
+.app-main-note-edit {
+  padding: 60px;
+}
+
+.app-main-note-edit input,
+textarea {
+  display: block;
+  border: 1px solid white;
+  margin-bottom: 20px;
+  width: 100%;
+  height: calc(50vh - 130px);
+  padding: 10px;
+  resize: none;
+  font-size: inherit;
+  font-family: inherit;
+}
+.app-main-note-edit input {
+  height: 50px;
+  font-size: 2rem;
 }
