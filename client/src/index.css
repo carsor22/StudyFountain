@@ -709,12 +709,12 @@ button {
   color: white;
 }
 
-.Jcont-main {
+.Jcont-UserInput {
   width: 70%;
   height: 100vh;
 }
-.Jcont-main-entry-edit,
-.Jcont-main-entry-preview {
+.Jcont-UserInput-entry-edit,
+.Jcont-UserInput-entry-preview {
   height: 50vh;
 }
 
@@ -727,11 +727,11 @@ button {
   color: grey;
 }
 
-.Jcont-main-entry-edit {
+.Jcont-UserInput-entry-edit {
   padding: 60px;
 }
 
-.Jcont-main-entry-edit input,
+.Jcont-UserInput-entry-edit input,
 textarea {
   display: block;
   border: 1px solid white;
@@ -743,7 +743,7 @@ textarea {
   font-size: inherit;
   font-family: inherit;
 }
-.Jcont-main-entry-edit input {
+.Jcont-UserInput-entry-edit input {
   height: 50px;
   font-size: 2rem;
 }

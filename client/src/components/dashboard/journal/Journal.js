@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 import uuid from 'react-uuid';
-import Main from './Main';
+import UserInput from './UserInput';
 import EntryList from './EntryList';
 
 function Journal() {
@@ -53,7 +53,7 @@ function Journal() {
         activeEntry={activeEntry}
         setActiveEntry={setActiveEntry}
       />
-      <Main activeEntry={getActiveEntry()} onUpdateEntry={onUpdateEntry} />
+      <UserInput activeEntry={getActiveEntry()} onUpdateEntry={onUpdateEntry} />
     </div>
   );
 }

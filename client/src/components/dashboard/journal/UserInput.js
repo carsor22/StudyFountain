@@ -1,4 +1,4 @@
-const Main = ({ activeEntry, onUpdateEntry }) => {
+const UserInput = ({ activeEntry, onUpdateEntry }) => {
   const onEditField = (field, value) => {
     onUpdateEntry({
       ...activeEntry,
@@ -10,8 +10,8 @@ const Main = ({ activeEntry, onUpdateEntry }) => {
   if (!activeEntry) return <div className='no-active-entry'>No Active Entry</div>;
 
   return (
-    <div className='Jcont-main'>
-      <div className='Jcont-main-entry-edit'>
+    <div className='Jcont-UserInput'>
+      <div className='Jcont-UserInput-entry-edit'>
         <input
           type='text'
           id='title'
@@ -31,4 +31,4 @@ const Main = ({ activeEntry, onUpdateEntry }) => {
   );
 };
 
-export default Main;
+export default UserInput;
