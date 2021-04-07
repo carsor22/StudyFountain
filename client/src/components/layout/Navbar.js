@@ -26,6 +26,11 @@ const Navbar = ({ auth: { isAuthenticated, loading }, logout }) => {
           <span className='u-nav'>myJournal</span>
         </span>
       </Link>
+      <Link to='/workshop' className='nav-link active'>
+        <span className='nav-link-span'>
+          <span className='u-nav'>myWorkshop</span>
+        </span>
+      </Link>
     </div>
   );
 

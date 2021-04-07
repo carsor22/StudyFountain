@@ -6,6 +6,7 @@ import Alert from '..//layout/Alert';
 import Dashboard from '../dashboard/Dashboard';
 import Planner from '../dashboard/planner/Planner';
 import Journal from '../dashboard/journal/Journal';
+import Workshop from '../dashboard/workshop/Workshop';
 import PrivateRoute from '../routing/PrivateRoute';
 
 export const Routes = () => {
@@ -18,6 +19,7 @@ export const Routes = () => {
         <PrivateRoute exact path='/Dashboard' component={Dashboard} />
         <PrivateRoute exact path='/Planner' component={Planner} />
         <PrivateRoute exact path='/Journal' component={Journal} />
+        <PrivateRoute exact path='/Workshop' component={Workshop} />
       </Switch>
     </section>
   );
