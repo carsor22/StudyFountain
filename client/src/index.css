@@ -747,3 +747,22 @@ textarea {
   height: 50px;
   font-size: 2rem;
 }
+
+.dash {
+  max-width: 1100px;
+  margin: auto;
+  overflow: hidden;
+  padding: 0 2rem;
+  margin-bottom: 3rem;
+}
+.profile-img {
+  position: relative;
+  background: url('./img/profile.png') no-repeat center center/cover;
+  height: 250px;
+  width: 250px;
+  margin-bottom: 3em;
+}
+
+.recent {
+  margin-top: 5em;
+}
