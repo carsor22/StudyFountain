@@ -6,8 +6,8 @@ export const NewTask = ({ onSave, onClose }) => {
 
   return (
     <>
-      <div id='addTask'>
-        <h2>Add task to calendar</h2>
+      <div id='NewTask'>
+        <h2>Add Task to Calendar</h2>
         <br></br>
         <input
           className={error ? 'error' : ''}

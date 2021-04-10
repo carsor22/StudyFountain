@@ -45,16 +45,22 @@ function Journal() {
   };
 
   return (
-    <div className='Jcont'>
-      <EntryList
-        entries={entries}
-        onAddEntry={onAddEntry}
-        onDeleteEntry={onDeleteEntry}
-        activeEntry={activeEntry}
-        setActiveEntry={setActiveEntry}
-      />
-      <UserInput activeEntry={getActiveEntry()} onUpdateEntry={onUpdateEntry} />
-    </div>
+    <>
+      <h1 class='large text-primary'>Journal</h1>
+      <div className='Jcont'>
+        <EntryList
+          entries={entries}
+          onAddEntry={onAddEntry}
+          onDeleteEntry={onDeleteEntry}
+          activeEntry={activeEntry}
+          setActiveEntry={setActiveEntry}
+        />
+        <UserInput
+          activeEntry={getActiveEntry()}
+          onUpdateEntry={onUpdateEntry}
+        />
+      </div>
+    </>
   );
 }
 

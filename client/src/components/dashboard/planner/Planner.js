@@ -24,6 +24,7 @@ export const Planner = () => {
 
   return (
     <>
+      <h1 class='large text-primary'>Planner</h1>
       <div className='bod'>
         <div id='cont'>
           <CalendarTop
