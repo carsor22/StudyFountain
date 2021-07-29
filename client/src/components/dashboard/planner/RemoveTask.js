@@ -1,8 +1,8 @@
-import React from 'react';
+import React, { Fragment } from 'react';
 
 export const RemoveTask = ({ onDelete, eventText, onClose }) => {
   return (
-    <>
+    <Fragment>
       <div id='removeTask'>
         <h2>Remove Task</h2>
         <br></br>
@@ -16,7 +16,7 @@ export const RemoveTask = ({ onDelete, eventText, onClose }) => {
         </button>
       </div>
       <div></div>
-    </>
+    </Fragment>
   );
 };
 

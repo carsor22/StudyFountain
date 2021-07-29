@@ -1,3 +1,6 @@
+import React from 'react';
+import ReactDOM from 'react-dom';
+
 const UserInput = ({ activeEntry, onUpdateEntry }) => {
   const onEditField = (field, value) => {
     onUpdateEntry({
@@ -7,7 +10,8 @@ const UserInput = ({ activeEntry, onUpdateEntry }) => {
     });
   };
 
-  if (!activeEntry) return <div className='no-active-entry'>No Active Entry</div>;
+  if (!activeEntry)
+    return <div className='no-active-entry'>No Active Entry</div>;
 
   return (
     <div className='Jcont-UserInput'>

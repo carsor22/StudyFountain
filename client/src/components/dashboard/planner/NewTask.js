@@ -1,11 +1,11 @@
-import React, { useState } from 'react';
+import React, { useState, Fragment } from 'react';
 
 export const NewTask = ({ onSave, onClose }) => {
   const [title, setTitle] = useState('');
   const [error, setError] = useState(false);
 
   return (
-    <>
+    <Fragment>
       <div id='NewTask'>
         <h2>Add Task to Calendar</h2>
         <br></br>
@@ -35,7 +35,7 @@ export const NewTask = ({ onSave, onClose }) => {
         </button>
       </div>
       <div></div>
-    </>
+    </Fragment>
   );
 };
 

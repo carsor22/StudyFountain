@@ -1,4 +1,7 @@
-import { useEffect, useState } from 'react';
+import React from 'react';
+import ReactDOM from 'react-dom';
+
+import { Fragment, useEffect, useState } from 'react';
 import uuid from 'react-uuid';
 import UserInput from './UserInput';
 import EntryList from './EntryList';
@@ -45,7 +48,7 @@ function Journal() {
   };
 
   return (
-    <>
+    <Fragment>
       <h1 class='large text-primary'>Journal</h1>
       <div className='Jcont'>
         <EntryList
@@ -60,7 +63,7 @@ function Journal() {
           onUpdateEntry={onUpdateEntry}
         />
       </div>
-    </>
+    </Fragment>
   );
 }
 

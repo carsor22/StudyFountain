@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, Fragment } from 'react';
 import { CalendarTop } from './CalendarTop';
 import { Day } from './Day';
 import { NewTask } from './NewTask';
@@ -23,59 +23,58 @@ export const Planner = () => {
   const { days, dateDisplay } = useDate(tasks, nav);
 
   return (
-    <>
-      <h1 class='large text-primary'>Planner</h1>
-      <div className='bod'>
-        <div id='cont'>
-          <CalendarTop
-            dateDisplay={dateDisplay}
-            onNext={() => setNav(nav + 1)}
-            onBack={() => setNav(nav - 1)}
-          />
-          <div id='weekdays'>
-            <div>Sunday</div>
-            <div>Monday</div>
-            <div>Tuesday</div>
-            <div>Wednesday</div>
-            <div>Thursday</div>
-            <div>Friday</div>
-            <div>Saturday</div>
-          </div>
-          <div id='calendar'>
-            {days.map((d, index) => (
-              <Day
-                key={index}
-                day={d}
-                onClick={() => {
-                  if (d.value !== 'padding') {
-                    setClicked(d.date);
-                  }
-                }}
-              />
-            ))}
-          </div>
+    <Fragment><h1 class='large text-primary'>Planner</h1>
+    <div className='bod'>
+      <div id='cont'>
+        <CalendarTop
+          dateDisplay={dateDisplay}
+          onNext={() => setNav(nav + 1)}
+          onBack={() => setNav(nav - 1)}
+        />
+        <div id='weekdays'>
+          <div>Sunday</div>
+          <div>Monday</div>
+          <div>Tuesday</div>
+          <div>Wednesday</div>
+          <div>Thursday</div>
+          <div>Friday</div>
+          <div>Saturday</div>
+        </div>
+        <div id='calendar'>
+          {days.map((d, index) => (
+            <Day
+              key={index}
+              day={d}
+              onClick={() => {
+                if (d.value !== 'padding') {
+                  setClicked(d.date);
+                }
+              }}
+            />
+          ))}
         </div>
       </div>
-      {clicked && !matchTaskToDate(clicked) && (
-        <NewTask
-          onClose={() => setClicked(null)}
-          onSave={(title) => {
-            setTasks([...tasks, { title, date: clicked }]);
-            setClicked(null);
-          }}
-        />
-      )}
-      {clicked && matchTaskToDate(clicked) && (
-        <RemoveTask
-          eventText={matchTaskToDate(clicked).title}
-          onClose={() => setClicked(null)}
-          onDelete={() => {
-            setTasks(tasks.filter((e) => e.date !== clicked));
-            setClicked(null);
-          }}
-        />
-      )}
-    </>
+    </div>
+    {clicked && !matchTaskToDate(clicked) && (
+      <NewTask
+        onClose={() => setClicked(null)}
+        onSave={(title) => {
+          setTasks([...tasks, { title, date: clicked }]);
+          setClicked(null);
+        }}
+      />
+    )}
+    {clicked && matchTaskToDate(clicked) && (
+      <RemoveTask
+        eventText={matchTaskToDate(clicked).title}
+        onClose={() => setClicked(null)}
+        onDelete={() => {
+          setTasks(tasks.filter((e) => e.date !== clicked));
+          setClicked(null);
+        }}
+      />
+    )}</Fragment>
+    
   );
 };
 

@@ -1,7 +1,7 @@
 {
   "name": "honours",
   "version": "1.0.0",
-  "description": "honours project",
+  "description": "mbi webapp",
   "main": "index.js",
   "scripts": {
     "start": "node server",
